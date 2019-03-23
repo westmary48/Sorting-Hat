@@ -42,6 +42,7 @@ document.getElementById('lssBtn').addEventListener('click', function (e) {
     if (e.target.id === 'sortButton') {
         let nameInput = document.getElementById('studentInput');
         buildStudentCard(studentInput.value)
+        sortDiv.style.display = 'none';
         // console.log(nameInput);
     }
 });
