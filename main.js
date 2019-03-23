@@ -34,7 +34,7 @@ const buildStudentCard = (sort) => {
     activateDeletes();
 }
 
-const activateDeletes = () => {
+const activateDeletes = (e) => {
     const deleteButtons = document.getElementsByClassName('deleteButton');
 
     for (let i = 0; i < deleteButtons.length; i++) {
@@ -49,10 +49,12 @@ const activateDeletes = () => {
 
 
 document.getElementById('lssBtn').addEventListener('click', function (e) {
+    e.preventDefault();
     sortingCard();
   });
 
   document.getElementById('sortDiv').addEventListener('click', function (e) {
+      e.preventDefault();
     if (e.target.id === 'sortButton') {
         let nameInput = document.getElementById('studentInput');
         buildStudentCard(studentInput.value)
