@@ -17,9 +17,9 @@ const sortingCard = () =>{
     </form>
     </div>`;
 
-    printToDom('lssBtn', domString);
+    printToDom('sortDiv', domString);
 }
 
-document.getElementById('lssBtn').addEventListener('click', function () {
-    console.log('lssBtn');
+document.getElementById('lssBtn').addEventListener('click', function (e) {
+    sortingCard();
   });
