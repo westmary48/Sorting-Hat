@@ -31,6 +31,20 @@ const buildStudentCard = (sort) => {
       </div>`;
 
     printToDom('studentCard', domString);
+    activateDeletes();
+}
+
+const activateDeletes = () => {
+    const deleteButtons = document.getElementsByClassName('deleteButton');
+
+    for (let i = 0; i < deleteButtons.length; i++) {
+        const element = deleteButtons[i];
+        element.addEventListener("click", (e) => {
+            const buttonIClicked = e.target;
+            const cardToDelete = buttonIClicked.parentNode.parentNode;
+            cardToDelete.remove();
+        })
+    }
 }
 
 
@@ -43,6 +57,6 @@ document.getElementById('lssBtn').addEventListener('click', function (e) {
         let nameInput = document.getElementById('studentInput');
         buildStudentCard(studentInput.value)
         sortDiv.style.display = 'none';
-        // console.log(nameInput);
     }
+
 });
