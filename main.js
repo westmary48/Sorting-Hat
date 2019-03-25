@@ -21,6 +21,7 @@ const sortingCard = () =>{
 }
 
 const buildStudentCard = (sort) => {
+    debugger
     let newHouse = Math.floor((Math.random() * house.length));
     let domString = `<div class="card w-25 m-2">
         <div class ="card-body">
@@ -31,8 +32,9 @@ const buildStudentCard = (sort) => {
       </div>`;
 
     printToDom('studentCard', domString);
-    activateDeletes();
+            activateDeletes();
 }
+
 
 const activateDeletes = (e) => {
     const deleteButtons = document.getElementsByClassName('deleteButton');
@@ -58,7 +60,7 @@ document.getElementById('lssBtn').addEventListener('click', function (e) {
     if (e.target.id === 'sortButton') {
         let nameInput = document.getElementById('studentInput');
         buildStudentCard(studentInput.value)
-        sortDiv.style.display = 'none';
+        // sortDiv.style.display = 'none';
     }
 
 });
