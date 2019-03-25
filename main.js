@@ -21,7 +21,6 @@ const sortingCard = () =>{
 }
 
 const buildStudentCard = (sort) => {
-    debugger
     let newHouse = Math.floor((Math.random() * house.length));
     let domString = `<div class="card w-25 m-2">
         <div class ="card-body">
