@@ -31,4 +31,4 @@ To start off with, you will use a bootstrap jumbotron to have your sorting hat i
 5. Javascript
 
 ## Screenshot
-![alt text](https://raw.githubusercontent.com/westmary48/temperature-converter/master/images/screenshot.png)
+![alt text]()
